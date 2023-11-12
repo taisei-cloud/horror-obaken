@@ -1,0 +1,11 @@
+<div class="horror">
+  <p><%= @horror.name %></p>
+  <p><%= @horror.address %></p>
+  <p><%= @horror.difficult %></p>
+  <p><%= @horror.about %></p>
+  <%= image_tag @horror.image_url, size: "250x200" if @horror.image? %>
+
+<% @horror.tags.each do |tag| %>
+    <span><%= tag.name %></span>
+<% end %>
+</div>

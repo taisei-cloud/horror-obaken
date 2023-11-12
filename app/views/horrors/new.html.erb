@@ -1,0 +1,67 @@
+<div class="first-container">
+
+<div class="second-container">
+<h1>オバケン紹介</h1>
+</div>
+
+<div class="third-container">
+<h2>新規投稿ページ</h2>
+<%= form_for @horror do |f| %>
+
+  <div class="toukou-content">
+  <div class="toukou-text1">
+  # 何処に行った？
+  <div class="field">
+    <%= f.label :名前 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+# 何処にある？
+  <div class="field">
+    <%= f.label :場所  %>
+    <%= f.select :address, 
+    [["方南町", "方南町"], 
+    ["浜松町", "浜松町"], 
+    ["その他", "その他"]], include_blank: "選択して下さい" %>
+  </div>
+
+# 難易度
+  <div class="field">
+    <%= f.number_field :difficult, :size => 30 %>
+  </div>
+  
+
+  <div class='form-group'>
+  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+      <div class='form-check'>
+          <%= tag.label class: 'form-check-label' do %>
+              <%= tag.check_box class: 'form-check-input' %>
+              <%= tag.text %>
+          <% end %>
+      </div>
+      <% end %>
+      </div>
+      </div>
+
+  <div class="toukou-text2">
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</div>
+
+# 感想
+<div class="field">
+<%= f.text_area :about, :size => "70x8" %>
+</div>
+</div>
+
+
+       
+</div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", horrors_path %>
+
+</div>

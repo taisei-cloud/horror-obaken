@@ -1,0 +1,49 @@
+<div class="first-box">
+
+<div class="second-box">
+<h1>オバケン紹介</h1>
+</div>
+
+<div class="third-box">
+<h2>一覧ページ</h2>
+</div>
+
+<div class="five-box">
+ <%= link_to "診断へ", new_shindan_path %>
+</div>
+  
+ <div class="first-img">  
+   <%= image_tag("ifu.musebiya.jpg", size: "450x275")  %>
+   <br><%= image_tag("kyouso.musebiya.jpg", size: "450x275")  %><br>
+   <br><%= image_tag("tokusyusousa.jpg", size: "450x275")  %><br>
+ </div>
+
+  <div class="four-box">
+  <h3>投稿一覧</h3>
+<%= link_to "新規投稿へ", new_horror_path %>
+
+<div class="kensaku-box">
+<%= form_tag({controller:"horrors",action:"index"}, method: :get) do %>
+  <% Tag.all.each do |t| %>
+      <%= check_box :tag_ids, t.name %><%= t.name %>
+  <% end %>
+  <br><%= submit_tag '検索' %><br>
+<% end %>
+ </div>
+
+<div class="horrors-container">
+  <% @horrors.each do |t| %>
+    <div class="horror">
+
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    
+      <%= t.name %>
+      <%= t.address %>
+      <%= t.difficult %>
+      <%= link_to "詳細へ", horror_path(t.id) %>
+      <%= button_to "削除する", horror_path(t.id), method: :delete %>  
+    </div>
+  <% end %>
+</div>
+</div>
+

@@ -1,0 +1,2 @@
+class ShinndannController < ApplicationController
+end
