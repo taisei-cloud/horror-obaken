@@ -14,7 +14,7 @@
     <p>殺人鬼に見つからないように古民家から脱出！</p>
     <p>狭い木造一軒家を丸ごと利用した極限のハラハラ感を味わおう</p>
 
-    <% if @shindan.question == "112" %> 
+    <% elsif @shindan.question == "112" %> 
     <a href="http://obakensan.com/if/" target="_blank">
      <%= image_tag("ifu.musebiya.jpg", size: "500x450")  %>
     </a>
@@ -24,7 +24,7 @@
 
     <% elsif @shindan.question == "121" %>
     <br> <a href="http://obakensan.com/kyouso/" target="_blank">
-     <%= image_tag("kyouso.musebiya.jpg", size: "450x275")  %>
+     <%= image_tag("kyouso.musebiya.jpg", size: "600x350")  %>
     </a><br>
     <h1>凶遡咽び家</h1>
     <p>幽霊が住む異界屋敷から脱出！</p>
@@ -32,7 +32,7 @@
 
     <% elsif @shindan.question == "122" %>
     <br> <a href="http://obakensan.com/kyouso/" target="_blank">
-     <%= image_tag("kyouso.musebiya.jpg", size: "450x275")  %>
+     <%= image_tag("kyouso.musebiya.jpg", size: "600x350")  %>
     </a><br>
     <h1>凶遡咽び家</h1>
     <p>幽霊が住む異界屋敷から脱出！</p>
@@ -40,7 +40,7 @@
 
     <% elsif @shindan.question == "212" %>
     <br><a href="http://obakensan.com/zero/" target="_blank">
-     <%= image_tag("tokusyusousa.jpg", size: "450x275")  %>
+     <%= image_tag("tokusyusousa.jpg", size: "600x450")  %>
     </a><br>
     <h1>特殊捜査0課</h1>
     <p>ホラーゲームの雰囲気も楽しめる謎解き特化のアトラクション</p>
@@ -48,7 +48,7 @@
 
     <% elsif @shindan.question == "222" %>
     <br><a href="http://obakensan.com/zero/" target="_blank">
-     <%= image_tag("tokusyusousa.jpg", size: "450x275")  %>
+     <%= image_tag("tokusyusousa.jpg", size: "600x450")  %>
     </a><br>
     <h1>特殊捜査0課</h1>
     <p>ホラーゲームの雰囲気も楽しめる謎解き特化のアトラクション</p>
@@ -68,9 +68,7 @@
 
 </div>
 
-<% end %>
 
-</div>
 
 
 
