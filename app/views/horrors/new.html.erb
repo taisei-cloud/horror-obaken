@@ -16,7 +16,7 @@
     <%= f.text_field :name, :size => 30 %>
   </div>
 
-# 何処にある？
+  <br># 何処にある？<br>
   <div class="field">
     <%= f.label :場所  %>
     <%= f.select :address, 
@@ -25,12 +25,16 @@
     ["その他", "その他"]], include_blank: "選択して下さい" %>
   </div>
 
-# 難易度
+  <br># 難易度<br>
   <div class="field">
-    <%= f.number_field :difficult, :size => 30 %>
+    <%= f.select :difficult, 
+    [["難しい", "難しい"], 
+    ["ちょうどいい", "ちょうどいい"], 
+    ["簡単", "簡単"]], include_blank: "選択して下さい" %>
   </div>
   
 
+  <br>#タグ<br>
   <div class='form-group'>
   <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
       <div class='form-check'>
@@ -45,11 +49,11 @@
 
   <div class="toukou-text2">
   <div class="field">
-  <%= f.label :image %>
+  <%= f.label :写真 %>
   <%= f.file_field :image %>
 </div>
 
-# 感想
+<br>#感想<br>
 <div class="field">
 <%= f.text_area :about, :size => "70x8" %>
 </div>

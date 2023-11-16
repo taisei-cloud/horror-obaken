@@ -9,21 +9,34 @@
 .col-12{
     background-color: black;
     color: white;
-    margin: 0px 70px;
+    font-size: xx-large;
 }
 
 .col-6{
     color: darkslateblue;
+    font-size: x-large;
 }
 
 .sindanbotan{
-    font-size: 25px;
+    font-size: x-large;
     text-align: center;
+}
+
+.shindan-con{
+    background-image: url(horror.back.jpg);
+    height: 100vh;
 }
 
 .intoro{
     text-align: center;
-    font-size: 27px;
+    font-size: 30px;
     background-color: black;
     color:ghostwhite
+}
+
+.shindan{
+    text-align: center;
+    font-size: larger;
+    
+    color: red;
 }

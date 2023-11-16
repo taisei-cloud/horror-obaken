@@ -4,25 +4,29 @@
 
 .first-box{
     background-color: #254951;
-    height:100vh;
+    height: 100vh;
+    background-image: url(man-2850159_1280.jpg);
 }
 
 .second-box{
-    background-color: black;
+    background-color:#2d2522;
     color: #C20B0B;
     text-align: center;
-    margin: 0px 500px;
     font-size: 25px;
+    border: #C20B0B solid;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .third-box{
     text-align: center;
-    color: #C20B0B;
-    font-size: 22px;
+    color: #de5f5f;
+    font-size: 25px;
 }
 
 .five-box{
-    background-color: aqua;
+    background-color: rgb(222, 9, 44);
     font-size: 22px;
     text-align: center;
     padding: 5px 20px;
@@ -33,6 +37,11 @@
     justify-content: center;
     justify-content: space-between;
     padding: 50px;
+}
+
+.sub-img{
+    border: #C20B0B 2px solid;
+    height: 100%;
 }
 
 .kensaku-box{
@@ -52,7 +61,8 @@
 }
 
 .first-container{
-    background-color: #254951;
+    background-image: url(horror.back.jpg);
+    height: 100vh;
 }
 
 .second-container{
@@ -64,7 +74,6 @@
 }
 
 .third-container{
-    background-color: #254951;
     color: white;
     text-align: center;
 }
@@ -81,10 +90,11 @@
 
 .toukou-text1{
     text-align: left;
+    font-size: 20px;
 }
 
 .toukou-text2{
     text-align: left;
-    bottom:30px;
+    font-size: 20px;
 }
     
