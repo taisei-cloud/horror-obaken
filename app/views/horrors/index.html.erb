@@ -1,3 +1,4 @@
+<div class="big-box">
 <div class="first-box">
 
 <div class="second-box">
@@ -55,10 +56,13 @@
       <%= t.name %>
       <%= t.address %>
       <%= t.difficult %>
+      <br><%= t.about %><br>
+      <br><%= t.image %><br>
       <%= link_to "詳細へ", horror_path(t.id) %>
       <%= button_to "削除する", horror_path(t.id), method: :delete %>  
     </div>
   <% end %>
+</div>
 </div>
 </div>
 
